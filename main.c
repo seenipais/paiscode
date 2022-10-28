@@ -1,3 +1,11 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <stdio.h>
 
 int main()
@@ -10,7 +18,7 @@ int main()
         {
              for(int j=0;j<5;j++)
             {
-                printf("%c \t",str[i][j]);
+                printf("%c||(%d,%d) \t",str[i][j],i,j);
             }
             printf("\n");
         }
@@ -29,6 +37,7 @@ int main()
             }
         }
                     la:
+                  x++;
                   
                    for(int i=x;i<5;i++)
                    {
@@ -36,11 +45,13 @@ int main()
                            {
                                if(str[i][y++]=='O')
                                {
-                                   e1=i;  e2=y;
+                                   e1=y;  e2=i;
+                                   printf("%c",str[e1][e2]);
                                    goto res;
                                }
                            }
                    }
+                   y++;
                   for(int j=y;j<5;j++)
                   {
                            if(str[x][j]=='O')
@@ -65,3 +76,4 @@ int main()
  
     return 0;
 }
+
